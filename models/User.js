@@ -1,5 +1,6 @@
-const { Schema, model } = require("mongoose");
 // Схема описывает то как наш пользователь будет хранится в базе данных
+// Модель схемы юзер
+const { Schema, model } = require("mongoose");
 
 const User = new Schema({
   username: { type: String, unique: true, required: true },
@@ -8,4 +9,3 @@ const User = new Schema({
 });
 
 module.exports = model("User", User);
-// Модель схемы юзер
