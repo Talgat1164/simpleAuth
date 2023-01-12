@@ -72,7 +72,8 @@ class authController {
     try {
       // Здесь работал разовый код для сохранения ролей
       // коммит "Сохранили роли в базы данных"
-      res.json("server work");
+      const users = await User.find();
+      res.json(users);
     } catch (e) {
       console.log(e);
     }
